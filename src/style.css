@@ -1,3 +1,57 @@
+:root {
+  --blue: #00acdc;
+  --dark: #000;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500px;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
 body {
   margin: 0;
+  padding: 0;
 }
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.header__main {
+  display: flex;
+  justify-content: space-between; /* Это свойство растолкает лого и меню в разные стороны */
+  align-items: center; /* Выровняет их по центру относительно друг друга (по вертикали) */
+  padding: 10px 50px; /* Добавит небольшие отступы от краев экрана */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Расстояние между пунктами меню */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--blue); /* Цвет при наведении */
+}
+
+a.isActive {
+  color: var(--blue); /* Цвет для активного пункта меню */
+  border-radius: 4px;
+  border-bottom: 4px solid var(--blue); /* Подчеркивание для активного пункта меню */
+  padding-bottom: 18.5px;
+}
+
+
